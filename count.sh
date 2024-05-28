@@ -2,8 +2,8 @@
 
 #################################################
 # Author: Aaqib Hussain
-# Date: 20/07/2021
-# Description: This script will count the number of files in the current directory
+# Date: 21/05/2024
+# Description: This script will count the number of files in directory
 # Version: 1.0
 #################################################
 

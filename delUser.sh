@@ -2,7 +2,7 @@
 
 ##################################################
 # Author:     Aaqib Hussain
-# Date:       20/07/2021
+# Date:       21/05/2024
 # Description:This script will delete users whose username starts with the specified characters
 # Version:    1.0
 ##################################################
