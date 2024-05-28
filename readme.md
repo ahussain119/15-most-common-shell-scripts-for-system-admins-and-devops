@@ -1,7 +1,6 @@
 # 15 commonly used shell scripts by system admins and DevOps
 In this repository I have written 15 commonly used scripts by system admins and devops engineers
 
-
 1. 'cpuHealth' will show you current health of the system.
 ![cpuHealth](./photos/cpuHealth.png)
 
@@ -13,5 +12,19 @@ In this repository I have written 15 commonly used scripts by system admins and 
 
 4. 'makearchive.sh' will create backup of directory selected in '~/backups'.
 ![makearchive.sh](./photos/makearchive.png)
+
 5. 'netReport.sh' will show current IP address, Default gatewaya and DNS server.
 ![netReport.sh](./photos/netReport.png)
+
+6. 'rsync.sh' will take two directory paths as arguments and synchronizes the contents of two directories.
+![rsync.sh](./photos/rsync.png)
+
+7. 'count.sh' will take directory path as argument and count the number of files in it.
+![count.sh](./photos/count.png)
+
+8. 'MonitorSystem.sh' will monitor the system resources and notify in the commandline if thresholds are hit.
+![MonitorSystem.sh](./photos/MonitorSystem.png)
+
+9. 'password.sh' will store and retrieve passwords using openssl, WARNING: NOT RECOMMENDED TO USE.
+![password.sh](./photos/password.png)
+
