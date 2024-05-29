@@ -28,3 +28,18 @@ In this repository I have written 15 commonly used scripts by system admins and 
 9. 'password.sh' will store and retrieve passwords using openssl, WARNING: NOT RECOMMENDED TO USE.
 ![password.sh](./photos/password.png)
 
+10. 'analysisLog.sh' will analyze the apache2 Logs for errors and warnings in real-time.
+![analysisLog.sh](./photos/analysisLog.png)
+
+11. 'installservice.sh' will install a service and start it.
+![installservice.sh](./photos/installservice.png)
+
+12. 'ServiceStatus.sh' will check the status of the services and restart if not active.
+![ServiceStatus.sh](./photos/ServiceStatus.png)
+
+13. 'storageCleanup.png' will clean up the system logs and temporary files.
+![storageCleanup.sh](./photos/storageCleanup.png)
+
+14. 'app2multiserver.sh' will deploy an application to multiple servers.
+
+15. 'dbbackups.sh' will create backups of mysql databases.

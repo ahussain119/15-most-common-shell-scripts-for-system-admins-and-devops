@@ -3,7 +3,7 @@
 ##################################################
 # Author:     Aaqib Hussain
 # Date:       27/05/2024
-# Description: This script will analysis the apache2 Logs for errors and warnings in realtime.
+# Description: This script will analyze the apache2 Logs for errors and warnings in real-time.
 # Version: 1
 ##################################################
 
@@ -11,7 +11,7 @@
 log_file="/var/log/apache2/error.log"
 
 # Starting the modification time of the log file
-prev_mod_time=$(sudo stat -c %Y "$logfile")
+prev_mod_time=$(sudo stat -c %Y "$log_file")
 
 # Function to analyze the log file
 analyze_log() {
@@ -27,37 +27,37 @@ analyze_log() {
     echo "Log file name: $(basename "$log_file")"
     echo "Total lines processed: $(wc -l < "$log_file")"
     echo "Total errors: $count_errors"
-    echo "Total warnings: $warning" 
+    echo "Total warnings: $count_warnings" 
 }
 
 # Main loop to monitor the log file
 echo "Monitoring log file: $log_file"
 while true; do
     # Checking if the log file exists
-    if [ ! -f "log_file" ]; then
+    if [ ! -f "$log_file" ]; then
         echo "Error: Log file '$log_file' not found"
         exit 1
     fi
 
     # Checking if the log file is readable
-    if [ ! -r "log_file" ]; then
+    if [ ! -r "$log_file" ]; then
         echo "Error: Log file '$log_file' not readable"
         return 1
     fi
 
-    # Check if the file has been modified bt comaparing the modification timestamps
-    curr_mod_time=(stat -c %Y "$log_file")
+    # Check if the file has been modified by comparing the modification timestamps
+    curr_mod_time=$(stat -c %Y "$log_file")
     if [ $curr_mod_time -gt $prev_mod_time ]; then
         clear
         # Clearing the screen and displaying the last 10 lines of the log file
-        tail -n 10 "log_file"
+        tail -n 10 "$log_file"
         analyze_log
         # Update the timestamps
         prev_mod_time=$curr_mod_time
     fi
 
-    # Delay of 3 secong before checking again
-    sleep 1
+    # Delay of 3 seconds before checking again
+    sleep 3
 done
 
 # Trap SIGINT (Ctrl+C) to exit gracefully
